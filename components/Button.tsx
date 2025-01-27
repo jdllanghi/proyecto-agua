@@ -1,9 +1,9 @@
 import React from 'react';
 
 interface ButtonProps {
-  text: string; // Texto que aparecerá en el botón
-  onClick: () => void; // Acción al hacer clic en el botón
-  className?: string; // Clases adicionales opcionales
+  text: string;
+  onClick: () => void; 
+  className?: string; 
 }
 
 export const Button: React.FC<ButtonProps> = ({ text, onClick, className }) => {

@@ -1,9 +1,19 @@
+/* Asegúrate de que el body ocupe toda la altura */
+body {
+  margin: 0;
+  height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column; /* Para apilar los elementos verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  background-color: #0adcdf; /* Fondo verde */
+}
 
 /* Botón */
 .base-button {
   padding: 10px 20px;
   background-color: #007acc;
-  color: white;
+  color: rgb(237, 243, 243);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -21,10 +31,14 @@
   align-items: center;
   justify-content: space-between;
   background-color: #004a6f;
-  color: white;
+  color: rgb(236, 240, 240);
   padding: 10px 20px;
+  width: 100%; /* Hace que el header ocupe todo el ancho */
+  max-width: 1200px; /* Limita el ancho máximo si lo deseas */
+  box-sizing: border-box; /* Asegura que el padding no se salga del ancho */
 }
 
+/* Logo */
 .logo {
   width: 50px;
   height: auto;
@@ -35,9 +49,9 @@
   margin: 20px auto;
   padding: 20px;
   max-width: 800px;
-  border: 1px solid #ddd;
+  border: 1px solid #06b1d7;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #0adcdf;
 }
 
 .section-title {
