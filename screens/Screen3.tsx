@@ -28,7 +28,7 @@ const Screen3: React.FC<Screen3Props> = ({ onNext, onReturn }) => {
 
       <View style={styles.row}>
         <Button
-          text={showText ? "Ocultar" : "Mostrar"}
+          text={showText ? "OCULTAR" : "MOSTRAR"}
           onClick={toggleText}
           style={styles.smallButton}
         />
@@ -51,8 +51,8 @@ const Screen3: React.FC<Screen3Props> = ({ onNext, onReturn }) => {
       )}
 
       <View style={styles.navigationButtons}>
-        <Button text="Return" onClick={onReturn} style={styles.navigationButton} />
-        <Button text="Next" onClick={onNext} style={styles.navigationButton} />
+        <Button text="REGRESAR" onClick={onReturn} style={styles.navigationButton} />
+        <Button text="SIGUIENTE" onClick={onNext} style={styles.navigationButton} />
       </View>
     </Section>
   );

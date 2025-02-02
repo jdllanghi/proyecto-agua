@@ -9,29 +9,39 @@ interface Screen1Props {
 
 const Screen1: React.FC<Screen1Props> = ({ onNext }) => {
   return (
-    <Section title="Bienvenido" style={styles.section}>
-      <Image 
-        source={require('../assets/images/images6.png')} 
-        style={styles.image} 
-        resizeMode="contain" 
-      />
+    <Section title="BIENVENIDOS" style={styles.section}>
+      {/* Contenedor de imágenes alineadas a los lados */}
+      <View style={styles.imageRow}>
+        {/* Imagen a la izquierda */}
+        <Image 
+          source={require('../assets/images/images6.png')} 
+          style={styles.image} 
+          resizeMode="contain"  // Mantener la relación de aspecto
+        />
+        {/* Imagen a la derecha */}
+        <Image 
+          source={require('../assets/images/images8.jpg')} 
+          style={styles.image} 
+          resizeMode="contain"  // Mantener la relación de aspecto
+        />
+      </View>
 
       <View style={styles.row}>
         <Text style={styles.text}>Dispositivo</Text>
-        <Button text="Acción Dispositivo" onClick={() => console.log("Acción para Dispositivo")} />
+        <Button text="DATOS" onClick={() => console.log("Acción para Dispositivo")} />
       </View>
 
       <View style={styles.row}>
         <Text style={styles.text}>Longitud</Text>
-        <Button text="Acción Longitud" onClick={() => console.log("Acción para Longitud")} />
+        <Button text="DATOS" onClick={() => console.log("Acción para Longitud")} />
       </View>
 
       <View style={styles.row}>
         <Text style={styles.text}>Latitud</Text>
-        <Button text="Acción Latitud" onClick={() => console.log("Acción para Latitud")} />
+        <Button text="DATOS" onClick={() => console.log("Acción para Latitud")} />
       </View>
 
-      <Button text="Next" onClick={onNext} style={styles.nextButton} />
+      <Button text="SIGUIENTE" onClick={onNext} style={styles.nextButton} />
     </Section>
   );
 };
@@ -42,12 +52,16 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
+  // Estilo para el contenedor de las imágenes alineadas
+  imageRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',  // Distribuye las imágenes a los extremos
+    marginBottom: 30,  // Espacio debajo de las imágenes
+  },
   image: {
-    width: '100%',
-    height: 'auto',
-    maxWidth: 500,
-    marginBottom: 30,
-    resizeMode: 'contain',
+    width: '48%',  // La imagen ocupará un 48% del ancho del contenedor
+    height: 200,   // Altura de las imágenes
+    maxWidth: 500, // El ancho máximo de cada imagen será de 500px
   },
   row: {
     flexDirection: 'row',

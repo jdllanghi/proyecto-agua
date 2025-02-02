@@ -15,7 +15,7 @@ const Screen4: React.FC<Screen4Props> = ({ onReturn }) => {
   };
 
   return (
-    <Section title="No Potable" style={styles.section}>
+    <Section title="NO POTABLE" style={styles.section}>
       <Text style={styles.highlightedText}>Información sobre Agua No Potable</Text>
 
       <View style={styles.imageContainer}>
@@ -27,7 +27,7 @@ const Screen4: React.FC<Screen4Props> = ({ onReturn }) => {
 
       <View style={styles.row}>
         <Button
-          text={showText ? "Ocultar" : "Mostrar"}
+          text={showText ? "OCULTAR" : "MOSTRAR"}
           onClick={toggleText}
           style={styles.smallButton}
         />
@@ -50,7 +50,7 @@ const Screen4: React.FC<Screen4Props> = ({ onReturn }) => {
       )}
 
       <View style={styles.navigationButtons}>
-        <Button text="Return" onClick={onReturn} style={styles.navigationButton} />
+        <Button text="REGRESAR" onClick={onReturn} style={styles.navigationButton} />
       </View>
     </Section>
   );

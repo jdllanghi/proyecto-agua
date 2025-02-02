@@ -18,42 +18,21 @@ const Screen2: React.FC<Screen2Props> = ({ onNext, onReturn }) => {
   const toggleNoPotable = () => setShowNoPotable((prev) => !prev);
 
   return (
-    <Section title="Detalles del Agua" style={styles.section}>
-      <Text style={styles.highlightedText}>Fecha y hora de la última muestra:</Text>
+    <Section title="DETALLES DEL AGUA" style={styles.section}>
+      <Text style={styles.highlightedText}>FECHA Y HORA:</Text>
 
       <View style={styles.row}>
-        <Text style={styles.text}>Estado del Agua</Text>
+        <Text style={styles.text}>ESTADO DEL AGUA</Text>
         <Button
-          text={showEstadoAgua ? "Ocultar" : "Mostrar"}
+          text={showEstadoAgua ? "OCULTAR" : "MOSTRAR"}
           onClick={toggleEstadoAgua}
           style={styles.smallButton}
         />
       </View>
-      {showEstadoAgua && <Text style={styles.detailsText}>Estado detallado...</Text>}
-
-      <View style={styles.row}>
-        <Text style={styles.text}>Potable</Text>
-        <Button
-          text={showPotable ? "Ocultar" : "Mostrar"}
-          onClick={togglePotable}
-          style={styles.smallButton}
-        />
-      </View>
-      {showPotable && <Text style={styles.detailsText}>Agua potable detallada...</Text>}
-
-      <View style={styles.row}>
-        <Text style={styles.text}>No Potable</Text>
-        <Button
-          text={showNoPotable ? "Ocultar" : "Mostrar"}
-          onClick={toggleNoPotable}
-          style={styles.smallButton}
-        />
-      </View>
-      {showNoPotable && <Text style={styles.detailsText}>Agua no potable detallada...</Text>}
-
+      {showEstadoAgua && <Text style={styles.detailsText}>Demuestra la cantidad de agua examinada y cuanta cantidad de contaminantes botan las fabrica aledañas</Text>}
       <View style={styles.navigationButtons}>
-        <Button text="Return" onClick={onReturn} style={styles.navigationButton} />
-        <Button text="Next" onClick={onNext} style={styles.navigationButton} />
+        <Button text="REGRESAR" onClick={onReturn} style={styles.navigationButton} />
+        <Button text="SIGUIENTE" onClick={onNext} style={styles.navigationButton} />
       </View>
     </Section>
   );
