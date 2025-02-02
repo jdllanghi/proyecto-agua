@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { Button } from '../components/Button';
 
 interface Screen4Props {
@@ -14,41 +14,76 @@ const Screen4: React.FC<Screen4Props> = ({ onReturn }) => {
   };
 
   return (
-    <View style={{ padding: 20, alignItems: 'center' }}>
-      <Text style={{ fontSize: 18, fontWeight: 'bold' }}>No Potable</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>No Potable</Text>
 
-      {/* Primera imagen */}
       <Image
         source={require('../assets/images/images3.jpeg')}
-        style={{ width: 200, height: 150, marginVertical: 10, borderRadius: 10 }}
+        style={styles.image}
       />
 
       <Button
         text={showText ? "Ocultar Detalles" : "Mostrar Detalles"}
         onClick={toggleText}
+        style={styles.button}
       />
 
-      {/* Texto y segunda imagen que se muestran u ocultan */}
       {showText && (
-        <View style={{ alignItems: 'center', marginTop: 10 }}>
-          <Text style={{ textAlign: 'center' }}>
+        <View style={styles.detailsContainer}>
+          <Text style={styles.detailsText}>
             Insegura: Contiene microorganismos dañinos (bacterias, virus, parásitos) y/o sustancias tóxicas
             (metales pesados, químicos, pesticidas). {'\n'}
             Desagradable: Turbia (con partículas en suspensión), con color, con olor y/o sabor desagradables.
           </Text>
           <Image
             source={require('../assets/images/images5.jpeg')}
-            style={{ width: 200, height: 150, marginTop: 10, borderRadius: 10 }}
+            style={styles.image}
           />
         </View>
       )}
 
-      {/* Botón de retorno */}
-      <View style={{ marginTop: 20 }}>
-        <Button text="Return" onClick={onReturn} />
+      <View style={styles.navigationButtons}>
+        <Button text="Return" onClick={onReturn} style={styles.button} />
       </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  image: {
+    width: 200,
+    height: 150,
+    marginVertical: 10,
+    borderRadius: 10,
+  },
+  button: {
+    width: '100%',
+    marginBottom: 10,
+    height: 50,
+    fontSize: 16,
+  },
+  detailsContainer: {
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  detailsText: {
+    textAlign: 'center',
+    color: '#666',
+  },
+  navigationButtons: {
+    marginTop: 20,
+    flexDirection: 'row',
+    gap: 10,
+  },
+});
 
 export default Screen4;
