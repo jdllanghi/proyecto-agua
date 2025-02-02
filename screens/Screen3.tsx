@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { Section } from '../components/Section';
 import { Button } from '../components/Button';
 
 interface Screen3Props {
@@ -15,19 +16,23 @@ const Screen3: React.FC<Screen3Props> = ({ onNext, onReturn }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Potable</Text>
+    <Section title="Potable" style={styles.section}>
+      <Text style={styles.highlightedText}>Información sobre Agua Potable</Text>
 
-      <Image
-        source={require('../assets/images/images.jpeg')}
-        style={styles.image}
-      />
+      <View style={styles.imageContainer}>
+        <Image
+          source={require('../assets/images/images.jpeg')}
+          style={styles.image}
+        />
+      </View>
 
-      <Button
-        text={showText ? "Ocultar Detalles" : "Mostrar Detalles"}
-        onClick={toggleText}
-        style={styles.button}
-      />
+      <View style={styles.row}>
+        <Button
+          text={showText ? "Ocultar" : "Mostrar"}
+          onClick={toggleText}
+          style={styles.smallButton}
+        />
+      </View>
 
       {showText && (
         <View style={styles.detailsContainer}>
@@ -36,42 +41,50 @@ const Screen3: React.FC<Screen3Props> = ({ onNext, onReturn }) => {
             (metales pesados, químicos). {'\n'}
             Agradable: Clara (sin turbidez), incolora, sin olor ni sabor desagradables.
           </Text>
-          <Image
-            source={require('../assets/images/images2.jpeg')}
-            style={styles.image}
-          />
+          <View style={styles.imageContainer}>
+            <Image
+              source={require('../assets/images/images2.jpeg')}
+              style={styles.image}
+            />
+          </View>
         </View>
       )}
 
       <View style={styles.navigationButtons}>
-        <Button text="Return" onClick={onReturn} style={styles.button} />
-        <Button text="Next" onClick={onNext} style={styles.button} />
+        <Button text="Return" onClick={onReturn} style={styles.navigationButton} />
+        <Button text="Next" onClick={onNext} style={styles.navigationButton} />
       </View>
-    </View>
+    </Section>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  section: {
+    width: '100%',
+    flex: 1,
     padding: 20,
-    alignItems: 'center',
   },
-  title: {
+  highlightedText: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333',
+    marginBottom: 10,
+    textAlign: 'center', // Centra el texto
+  },
+  imageContainer: {
+    alignItems: 'center', // Centra la imagen
+    justifyContent: 'center',
+    marginVertical: 10,
   },
   image: {
     width: 200,
     height: 150,
-    marginVertical: 10,
     borderRadius: 10,
   },
-  button: {
-    width: '100%',
-    marginBottom: 10,
-    height: 50,
-    fontSize: 16,
+  smallButton: {
+    width: '40%',
+    height: 40,
+    fontSize: 12,
   },
   detailsContainer: {
     alignItems: 'center',
@@ -81,10 +94,23 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#666',
   },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center', // Centra el contenido de la fila
+    marginBottom: 20,
+  },
   navigationButtons: {
     marginTop: 20,
     flexDirection: 'row',
-    gap: 10,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+  },
+  navigationButton: {
+    width: '48%',
+    height: 50,
+    fontSize: 16,
   },
 });
 

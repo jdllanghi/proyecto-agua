@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
+    color: '#004a6f',  // El mismo color que el encabezado
   },
   nextButton: {
     width: '100%',
