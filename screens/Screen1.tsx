@@ -10,19 +10,19 @@ interface Screen1Props {
 const Screen1: React.FC<Screen1Props> = ({ onNext }) => {
   return (
     <Section title="BIENVENIDOS" style={styles.section}>
-      {/* Contenedor de imágenes alineadas a los lados */}
+      
       <View style={styles.imageRow}>
-        {/* Imagen a la izquierda */}
+    
         <Image 
           source={require('../assets/images/images6.png')} 
           style={styles.image} 
-          resizeMode="contain"  // Mantener la relación de aspecto
+          resizeMode="contain"  
         />
-        {/* Imagen a la derecha */}
+        
         <Image 
           source={require('../assets/images/images8.jpg')} 
           style={styles.image} 
-          resizeMode="contain"  // Mantener la relación de aspecto
+          resizeMode="contain" 
         />
       </View>
 
@@ -52,16 +52,16 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
-  // Estilo para el contenedor de las imágenes alineadas
+ 
   imageRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',  // Distribuye las imágenes a los extremos
-    marginBottom: 30,  // Espacio debajo de las imágenes
+    justifyContent: 'space-between',  
+    marginBottom: 30,  
   },
   image: {
-    width: '48%',  // La imagen ocupará un 48% del ancho del contenedor
-    height: 200,   // Altura de las imágenes
-    maxWidth: 500, // El ancho máximo de cada imagen será de 500px
+    width: '48%',  
+    height: 200,  
+    maxWidth: 500, 
   },
   row: {
     flexDirection: 'row',
@@ -70,11 +70,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 20,  // Tamaño de letra más grande para mejor legibilidad
-    fontFamily: 'Arial',  // Fuente más moderna
-    fontWeight: '600',  // Peso de fuente medio
-    color: '#004a6f',  // El mismo color que el encabezado
-    letterSpacing: 0.5,  // Espaciado entre letras para un look más limpio
+    fontSize: 20,  
+    fontFamily: 'Arial',  
+    fontWeight: '600',  
+    color: '#004a6f',  
+    letterSpacing: 0.5, 
   },
   nextButton: {
     width: '100%',

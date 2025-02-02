@@ -45,12 +45,12 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   highlightedText: {
-    fontSize: 20,  // Aumentamos el tamaño de la fuente para mayor visibilidad
-    fontFamily: 'Arial',  // Fuente más moderna
+    fontSize: 20,  
+    fontFamily: 'Arial',  
     fontWeight: 'bold',
-    color: '#004a6f',  // Manteniendo el color de la estructura
+    color: '#004a6f',  
     marginBottom: 10,
-    letterSpacing: 0.5,  // Espaciado entre letras
+    letterSpacing: 0.5,  
   },
   row: {
     flexDirection: 'row',
@@ -59,23 +59,23 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 20,  // Aumentamos el tamaño de la fuente
-    fontFamily: 'Arial',  // Fuente más moderna
-    fontWeight: '600',  // Peso de la fuente
-    color: '#004a6f',  // El mismo color que el encabezado
-    letterSpacing: 0.5,  // Espaciado entre letras
+    fontSize: 20,  
+    fontFamily: 'Arial',  
+    fontWeight: '600', 
+    color: '#004a6f',  
+    letterSpacing: 0.5,  
   },
   smallButton: {
     width: '40%',
     height: 40,
-    fontSize: 14,  // Aumentamos el tamaño de la fuente en los botones pequeños
+    fontSize: 14,  
   },
   detailsText: {
-    fontSize: 16,  // Tamaño de la fuente para los detalles
+    fontSize: 16,  
     color: '#666',
     marginTop: 5,
-    fontFamily: 'Arial',  // Fuente moderna
-    letterSpacing: 0.5,  // Espaciado entre letras
+    fontFamily: 'Arial',  
+    letterSpacing: 0.5,  
   },
   navigationButtons: {
     marginTop: 20,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   navigationButton: {
     width: '48%',
     height: 50,
-    fontSize: 18,  // Aumentamos el tamaño de la fuente en los botones de navegación
+    fontSize: 18, 
   },
 });
 

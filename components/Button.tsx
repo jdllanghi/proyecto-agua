@@ -2,16 +2,16 @@ import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 interface ButtonProps {
-  text: string; // Cambié "Text" a "text" para seguir convenciones
+  text: string; 
   onClick: () => void;
-  style?: object; // Cambié "className" a "style" para React Native
+  style?: object; 
 }
 
 export const Button: React.FC<ButtonProps> = ({ text, onClick, style }) => {
   return (
     <TouchableOpacity
-      onPress={onClick} // Cambié "onClick" a "onPress"
-      style={[styles.button, style]} // Usamos StyleSheet
+      onPress={onClick} 
+      style={[styles.button, style]} 
     >
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>

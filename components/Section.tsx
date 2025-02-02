@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 interface SectionProps {
   title: string;
   children: React.ReactNode;
-  style?: object; // Cambié "className" a "style"
+  style?: object; 
 }
 
 export const Section: React.FC<SectionProps> = ({ title, children, style }) => {

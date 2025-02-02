@@ -65,28 +65,28 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   highlightedText: {
-    fontSize: 20,  // Aumentamos el tamaño de la fuente para mayor visibilidad
-    fontFamily: 'Arial',  // Fuente moderna
+    fontSize: 20,  
+    fontFamily: 'Arial',  
     fontWeight: 'bold',
-    color: '#004a6f',  // El mismo color que el encabezado
+    color: '#004a6f',  
     marginBottom: 15,
-    textAlign: 'center', // Centra el texto
-    letterSpacing: 0.5,  // Espaciado entre letras
+    textAlign: 'center', 
+    letterSpacing: 0.5,  
   },
   imageContainer: {
-    alignItems: 'center', // Centra la imagen
+    alignItems: 'center', 
     justifyContent: 'center',
     marginVertical: 10,
   },
   image: {
-    width: 250,  // Aumentamos el tamaño de la imagen
-    height: 180, // Proporcionalmente mayor
+    width: 250, 
+    height: 180, 
     borderRadius: 10,
   },
   smallButton: {
     width: '40%',
     height: 40,
-    fontSize: 14,  // Aumentamos el tamaño de la fuente en los botones pequeños
+    fontSize: 14,  
   },
   detailsContainer: {
     alignItems: 'center',
@@ -95,15 +95,15 @@ const styles = StyleSheet.create({
   detailsText: {
     textAlign: 'center',
     color: '#666',
-    fontSize: 16,  // Tamaño de la fuente más grande para mayor legibilidad
-    fontFamily: 'Arial',  // Fuente moderna
-    letterSpacing: 0.5,  // Espaciado entre letras
+    fontSize: 16,  
+    fontFamily: 'Arial',  
+    letterSpacing: 0.5,  
     marginTop: 10,
   },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center', // Centra el contenido de la fila
+    justifyContent: 'center', 
     marginBottom: 20,
   },
   navigationButtons: {
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   navigationButton: {
     width: '48%',
     height: 50,
-    fontSize: 18,  // Aumentamos el tamaño de la fuente en los botones de navegación
+    fontSize: 18,  
   },
 });
 
