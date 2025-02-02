@@ -1,23 +1,18 @@
-import React, { useState } from "react";
-import { Header } from "./components/Header";
-import './App.css';
-
-// Importar pantallas específicas
-import Screen1 from "./screens/Screen1";
-import Screen2 from "./screens/Screen2";
-import Screen3 from "./screens/Screen3";
-import Screen4 from "./screens/Screen4";
+import React, { useState } from 'react';
+import { View } from 'react-native';
+import { Header } from './components/Header';
+import Screen1 from './screens/Screen1';
+import Screen2 from './screens/Screen2';
+import Screen3 from './screens/Screen3';
+import Screen4 from './screens/Screen4';
 
 const App: React.FC = () => {
-  // Estado para gestionar la pantalla actual
   const [currentScreen, setCurrentScreen] = useState<number>(1);
 
-  // Función para cambiar de pantalla
   const navigateTo = (screen: number) => {
     setCurrentScreen(screen);
   };
 
-  // Renderizar pantalla según el estado
   const renderScreen = () => {
     switch (currentScreen) {
       case 1:
@@ -34,10 +29,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
+    <View style={{ flex: 1 }}>
       <Header />
-      <main>{renderScreen()}</main>
-    </div>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        {renderScreen()}
+      </View>
+    </View>
   );
 };
 

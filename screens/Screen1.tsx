@@ -1,6 +1,7 @@
-import React from "react";
-import { Section } from "../components/Section";
-import { Button } from "../components/Button";
+import React from 'react';
+import { View, Text } from 'react-native';
+import { Section } from '../components/Section';
+import { Button } from '../components/Button';
 
 interface Screen1Props {
   onNext: () => void;
@@ -9,20 +10,20 @@ interface Screen1Props {
 const Screen1: React.FC<Screen1Props> = ({ onNext }) => {
   return (
     <Section title="Bienvenido">
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <h1>Dispositivo</h1>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Text>Dispositivo</Text>
         <Button text="Acción Dispositivo" onClick={() => console.log("Acción para Dispositivo")} />
-      </div>
+      </View>
 
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <h2>Longitud</h2>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Text>Longitud</Text>
         <Button text="Acción Longitud" onClick={() => console.log("Acción para Longitud")} />
-      </div>
+      </View>
 
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <h1>Latitud</h1>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Text>Latitud</Text>
         <Button text="Acción Latitud" onClick={() => console.log("Acción para Latitud")} />
-      </div>
+      </View>
 
       <Button text="Next" onClick={onNext} />
     </Section>
