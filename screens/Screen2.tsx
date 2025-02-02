@@ -66,10 +66,12 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   highlightedText: {
-    fontSize: 18,
+    fontSize: 20,  // Aumentamos el tamaño de la fuente para mayor visibilidad
+    fontFamily: 'Arial',  // Fuente más moderna
     fontWeight: 'bold',
-    color: '#333',
+    color: '#004a6f',  // Manteniendo el color de la estructura
     marginBottom: 10,
+    letterSpacing: 0.5,  // Espaciado entre letras
   },
   row: {
     flexDirection: 'row',
@@ -78,16 +80,23 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 18,
+    fontSize: 20,  // Aumentamos el tamaño de la fuente
+    fontFamily: 'Arial',  // Fuente más moderna
+    fontWeight: '600',  // Peso de la fuente
+    color: '#004a6f',  // El mismo color que el encabezado
+    letterSpacing: 0.5,  // Espaciado entre letras
   },
   smallButton: {
     width: '40%',
     height: 40,
-    fontSize: 12,
+    fontSize: 14,  // Aumentamos el tamaño de la fuente en los botones pequeños
   },
   detailsText: {
+    fontSize: 16,  // Tamaño de la fuente para los detalles
     color: '#666',
     marginTop: 5,
+    fontFamily: 'Arial',  // Fuente moderna
+    letterSpacing: 0.5,  // Espaciado entre letras
   },
   navigationButtons: {
     marginTop: 20,
@@ -99,7 +108,7 @@ const styles = StyleSheet.create({
   navigationButton: {
     width: '48%',
     height: 50,
-    fontSize: 16,
+    fontSize: 18,  // Aumentamos el tamaño de la fuente en los botones de navegación
   },
 });
 

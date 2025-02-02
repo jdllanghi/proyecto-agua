@@ -56,8 +56,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 18,
+    fontSize: 20,  // Tamaño de letra más grande para mejor legibilidad
+    fontFamily: 'Arial',  // Fuente más moderna
+    fontWeight: '600',  // Peso de fuente medio
     color: '#004a6f',  // El mismo color que el encabezado
+    letterSpacing: 0.5,  // Espaciado entre letras para un look más limpio
   },
   nextButton: {
     width: '100%',
