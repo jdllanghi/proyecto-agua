@@ -29,7 +29,28 @@ const Screen2: React.FC<Screen2Props> = ({ onNext, onReturn }) => {
           style={styles.smallButton}
         />
       </View>
-      {showEstadoAgua && <Text style={styles.detailsText}>Demuestra la cantidad de agua examinada y cuanta cantidad de contaminantes botan las fabrica aledañas</Text>}
+      {showEstadoAgua && <Text style={styles.detailsText}>Demuestra la cantidad de agua examinada y cuanta cantidad de contaminantes botan las fábricas aledañas.</Text>}
+      
+      <View style={styles.row}>
+        <Text style={styles.text}>POTABILIDAD DEL AGUA</Text>
+        <Button
+          text={showPotable ? "OCULTAR" : "MOSTRAR"}
+          onClick={togglePotable}
+          style={styles.smallButton}
+        />
+      </View>
+      {showPotable && <Text style={styles.detailsText}>El agua es potable y segura para el consumo.</Text>}
+      
+      <View style={styles.row}>
+        <Text style={styles.text}>AGUA NO POTABLE</Text>
+        <Button
+          text={showNoPotable ? "OCULTAR" : "MOSTRAR"}
+          onClick={toggleNoPotable}
+          style={styles.smallButton}
+        />
+      </View>
+      {showNoPotable && <Text style={styles.detailsText}>El agua no es potable y puede contener contaminantes.</Text>}
+      
       <View style={styles.navigationButtons}>
         <Button text="REGRESAR" onClick={onReturn} style={styles.navigationButton} />
         <Button text="SIGUIENTE" onClick={onNext} style={styles.navigationButton} />
@@ -45,12 +66,12 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   highlightedText: {
-    fontSize: 20,  
-    fontFamily: 'Arial',  
+    fontSize: 20,
+    fontFamily: 'Arial',
     fontWeight: 'bold',
-    color: '#004a6f',  
+    color: '#004a6f',
     marginBottom: 10,
-    letterSpacing: 0.5,  
+    letterSpacing: 0.5,
   },
   row: {
     flexDirection: 'row',
@@ -59,23 +80,23 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 20,  
-    fontFamily: 'Arial',  
-    fontWeight: '600', 
-    color: '#004a6f',  
-    letterSpacing: 0.5,  
+    fontSize: 20,
+    fontFamily: 'Arial',
+    fontWeight: '600',
+    color: '#004a6f',
+    letterSpacing: 0.5,
   },
   smallButton: {
     width: '40%',
     height: 40,
-    fontSize: 14,  
+    fontSize: 14,
   },
   detailsText: {
-    fontSize: 16,  
+    fontSize: 16,
     color: '#666',
     marginTop: 5,
-    fontFamily: 'Arial',  
-    letterSpacing: 0.5,  
+    fontFamily: 'Arial',
+    letterSpacing: 0.5,
   },
   navigationButtons: {
     marginTop: 20,
@@ -87,7 +108,7 @@ const styles = StyleSheet.create({
   navigationButton: {
     width: '48%',
     height: 50,
-    fontSize: 18, 
+    fontSize: 18,
   },
 });
 
